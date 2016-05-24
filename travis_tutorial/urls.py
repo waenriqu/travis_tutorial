@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from ingreso_pacientes.views import listar_crear_paciente,detalles_paciente
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^pacientes/$',listar_crear_paciente),
+    url(r'^pacientes/(?P<pk>[\d]+)/$',detalles_paciente)
 ]
