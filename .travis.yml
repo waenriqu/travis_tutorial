@@ -6,5 +6,4 @@ before_install: "pip install -r requeriments.txt"
 
 script: "coverage run --source=ingreso_pacientes manage.py test ingreso_pacientes"
     
-after_script:
-    "coveralls"
+after_script: "coveralls"
